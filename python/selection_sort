@@ -1,0 +1,12 @@
+def selection_sort(alist):
+    for i in range(len(alist)):
+        min_idx = i
+        for j in range(i+1, len(alist)):
+            if alist[min_idx] > alist[j]:
+                min_idx = j
+        # Swap the minimum value with the compared value
+        alist[i], alist[min_idx] = alist[min_idx], alist[i]
+
+l = [19,2,31,45,30,11,121,27]
+selection_sort(l)
+print(l)
